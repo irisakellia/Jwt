@@ -3,8 +3,8 @@ const userService = require("../services/signup");
 async function createUser(req,res){
     try {
         
-        const userData = req.body;
-        const user = await userService.createUser(userData);
+        const {name, email, password} = req.body;
+        const user = await userService.createUser({name, email, password});
         res.status(200).json({user:user, message:"user been created successfully"});
 
     } catch (error) {
