@@ -1,4 +1,7 @@
-const mongoose = require('../configuration/dbConfig.js');
+const mongoose = require('mongoose');
+
+const dbConnection = require('../configuration/dbConfig')
+
 
 const userSchema = new mongoose.Schema({
 
@@ -10,6 +13,6 @@ const userSchema = new mongoose.Schema({
 
 });
 
+dbConnection();
+
 module.exports = mongoose.model("user", userSchema)
-
-

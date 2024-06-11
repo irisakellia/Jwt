@@ -10,7 +10,7 @@ mongoose.connection.on("error",()=>{
     console.error("failed to connect to the database");
 })
 
-module.exports = mongoose ;
+module.exports = dbConnection() ;
 
 
 
