@@ -5,7 +5,7 @@ async function createUser(req,res){
         
         const userData = req.body;
         const user = await userService.createUser(userData);
-        res.status(201).json({user:user, message:"user been created successfully"});
+        res.status(200).json({user:user, message:"user been created successfully"});
 
     } catch (error) {
         res.status(400).json({ message:" can not create user"});
@@ -13,3 +13,5 @@ async function createUser(req,res){
 }
 
 module.exports = {createUser}
+
+

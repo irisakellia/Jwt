@@ -6,8 +6,8 @@ mongoose.connection.on("connected",()=>{
     console.log("connected successfully to my db");
 })
 
-mongoose.connection.on("unconnected",()=>{
-    console.log("failed to connect to the database");
+mongoose.connection.on("error",()=>{
+    console.error("failed to connect to the database");
 })
 
 module.exports = mongoose ;
