@@ -6,7 +6,7 @@ const dbConnection = () => {
   );
 };
 mongoose.connection.on("connected", () => {
-  console.log("connected successfully to my db");
+  console.log("connected successfully to my sheri mongo");
 });
 
 mongoose.connection.on("error", () => {
