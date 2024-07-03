@@ -20,6 +20,7 @@ async function login(email,password){
         return token ;
         
     } catch (error) {
+        console.log("login error",error.message)
         throw new Error("Invalid credentials")
     }
 
