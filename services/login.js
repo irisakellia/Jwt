@@ -21,7 +21,7 @@ async function login(email,password){
         
     } catch (error) {
         console.log("login error",error.message)
-        throw new Error("Invalid credential")
+        throw new Error("Invalid credentials")
     }
 
 }
