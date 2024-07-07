@@ -16,7 +16,7 @@ function authenticateToken(req,res,next){
 
     jwt.verify(token, secretKey,(err, user)=>{
         if(err){
-            return res.status(403).json({message:"Forbidden: Inavlid Token"})
+            return res.status(403).json({message:"Forbidden: Invalid Token"})
         }
         req.user = user;
         next();

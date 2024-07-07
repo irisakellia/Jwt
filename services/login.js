@@ -13,7 +13,7 @@ async function login(email,password){
 
         const isPasswordValid = await bcrypt.compare(password, existingUser.password);
         if(!isPasswordValid){
-            throw new Error("Incorrect passwordf");
+            throw new Error("Incorrect password");
         }
 
         const token = generateToken(existingUser);
