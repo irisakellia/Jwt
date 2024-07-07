@@ -10,7 +10,7 @@ function authenticateToken(req,res,next){
     }
 
     const [bearer, token] = authHeader.split(" ");
-    if(!bearer || !token){
+    if(bearer !== "Bearer" || !token){
         return res.status(401).json({message:"Unauthorised: Invalid token format"});
     }
 
@@ -24,4 +24,4 @@ function authenticateToken(req,res,next){
 
 }
 
-module.exports = {authenticateToken} ;
+module.exports = {authenticateToken};
